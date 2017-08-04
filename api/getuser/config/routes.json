@@ -1,0 +1,57 @@
+{
+  "routes": {
+    "GET /getuser": {
+      "controller": "Getuser",
+      "action": "find",
+      "policies": [
+        "isAuthorized"
+      ]
+    },
+    "GET /getuser/:id": {
+      "controller": "Getuser",
+      "action": "findOne",
+      "policies": [
+        "isAuthorized"
+      ]
+    },
+    "POST /getuser": {
+      "controller": "Getuser",
+      "action": "create",
+      "policies": [
+        "isAuthorized",
+        "addDataCreate"
+      ]
+    },
+    "PUT /getuser/:id": {
+      "controller": "Getuser",
+      "action": "update",
+      "policies": [
+        "isAuthorized",
+        "addDataUpdate"
+      ]
+    },
+    "DELETE /getuser/:id": {
+      "controller": "Getuser",
+      "action": "destroy",
+      "policies": [
+        "isAuthorized"
+      ]
+    },
+    "POST /getuser/:parentId/:relation": {
+      "controller": "Getuser",
+      "action": "add",
+      "policies": [
+        "isAuthorized",
+        "addDataCreate"
+      ]
+    },
+    "DELETE /getuser/:parentId/:relation/:id": {
+      "controller": "Getuser",
+      "action": "remove",
+      "policies": [
+        "isAuthorized",
+        "addDataUpdate"
+      ]
+    }
+  }
+}

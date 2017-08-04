@@ -1,0 +1,29 @@
+{
+  "identity": "getuser",
+  "connection": "",
+  "displayedAttribute": "",
+  "schema": true,
+  "attributes": {
+    "userList":[{
+      "userId":1,
+      "userName":"Sanket"
+    },
+    {
+      "userId":1,
+      "userName":"Mitul"
+    }],
+
+    "createdBy": {
+      "model": "user"
+    },
+    "updatedBy": {
+      "model": "user"
+    },
+    "contributors": {
+      "collection": "user",
+      "via": "getusers"
+    }
+  },
+  "autoCreatedAt": true,
+  "autoUpdatedAt": true
+}
